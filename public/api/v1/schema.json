@@ -1,0 +1,542 @@
+{
+  "resources": [
+    {
+      "name": "AuthorResource",
+      "type": "authors",
+      "graphql_entrypoint": "authors",
+      "description": null,
+      "attributes": {
+        "id": {
+          "type": "integer_id",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "name": {
+          "type": "string",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "bio": {
+          "type": "string",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "fb": {
+          "type": "string",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "ig": {
+          "type": "string",
+          "readable": true,
+          "writable": true,
+          "description": null
+        }
+      },
+      "extra_attributes": {},
+      "sorts": {
+        "id": {},
+        "name": {},
+        "bio": {},
+        "fb": {},
+        "ig": {}
+      },
+      "filters": {
+        "id": {
+          "type": "integer_id",
+          "operators": [
+            "eq",
+            "not_eq",
+            "gt",
+            "gte",
+            "lt",
+            "lte"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "operators": [
+            "eq",
+            "not_eq",
+            "eql",
+            "not_eql",
+            "prefix",
+            "not_prefix",
+            "suffix",
+            "not_suffix",
+            "match",
+            "not_match"
+          ]
+        },
+        "bio": {
+          "type": "string",
+          "operators": [
+            "eq",
+            "not_eq",
+            "eql",
+            "not_eql",
+            "prefix",
+            "not_prefix",
+            "suffix",
+            "not_suffix",
+            "match",
+            "not_match"
+          ]
+        },
+        "fb": {
+          "type": "string",
+          "operators": [
+            "eq",
+            "not_eq",
+            "eql",
+            "not_eql",
+            "prefix",
+            "not_prefix",
+            "suffix",
+            "not_suffix",
+            "match",
+            "not_match"
+          ]
+        },
+        "ig": {
+          "type": "string",
+          "operators": [
+            "eq",
+            "not_eq",
+            "eql",
+            "not_eql",
+            "prefix",
+            "not_prefix",
+            "suffix",
+            "not_suffix",
+            "match",
+            "not_match"
+          ]
+        }
+      },
+      "relationships": {
+        "recipes": {
+          "type": "has_many",
+          "description": null,
+          "resource": "RecipeResource"
+        }
+      },
+      "stats": {
+        "total": [
+          "count"
+        ]
+      }
+    },
+    {
+      "name": "CategoryResource",
+      "type": "categories",
+      "graphql_entrypoint": "categories",
+      "description": null,
+      "attributes": {
+        "id": {
+          "type": "integer_id",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "name": {
+          "type": "string",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "group": {
+          "type": "string",
+          "readable": true,
+          "writable": true,
+          "description": null
+        }
+      },
+      "extra_attributes": {},
+      "sorts": {
+        "id": {},
+        "name": {},
+        "group": {}
+      },
+      "filters": {
+        "id": {
+          "type": "integer_id",
+          "operators": [
+            "eq",
+            "not_eq",
+            "gt",
+            "gte",
+            "lt",
+            "lte"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "operators": [
+            "eq",
+            "not_eq",
+            "eql",
+            "not_eql",
+            "prefix",
+            "not_prefix",
+            "suffix",
+            "not_suffix",
+            "match",
+            "not_match"
+          ]
+        },
+        "group": {
+          "type": "string",
+          "operators": [
+            "eq",
+            "not_eq",
+            "eql",
+            "not_eql",
+            "prefix",
+            "not_prefix",
+            "suffix",
+            "not_suffix",
+            "match",
+            "not_match"
+          ]
+        },
+        "recipe_id": {
+          "type": "integer_id",
+          "operators": [
+            "eq",
+            "not_eq",
+            "gt",
+            "gte",
+            "lt",
+            "lte"
+          ]
+        }
+      },
+      "relationships": {
+        "recipes": {
+          "type": "many_to_many",
+          "description": null,
+          "resource": "RecipeResource"
+        }
+      },
+      "stats": {
+        "total": [
+          "count"
+        ]
+      }
+    },
+    {
+      "name": "RecipeResource",
+      "type": "recipes",
+      "graphql_entrypoint": "recipes",
+      "description": null,
+      "attributes": {
+        "id": {
+          "type": "integer_id",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "title": {
+          "type": "string",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "text": {
+          "type": "string",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "difficulty": {
+          "type": "string",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "preparation_time": {
+          "type": "integer",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "created_at": {
+          "type": "datetime",
+          "readable": true,
+          "writable": true,
+          "description": null
+        },
+        "likes_count": {
+          "type": "integer",
+          "readable": true,
+          "writable": true,
+          "description": null
+        }
+      },
+      "extra_attributes": {},
+      "sorts": {
+        "id": {},
+        "title": {},
+        "text": {},
+        "difficulty": {},
+        "preparation_time": {},
+        "created_at": {},
+        "likes_count": {}
+      },
+      "filters": {
+        "id": {
+          "type": "integer_id",
+          "operators": [
+            "eq",
+            "not_eq",
+            "gt",
+            "gte",
+            "lt",
+            "lte"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "operators": [
+            "eq",
+            "not_eq",
+            "eql",
+            "not_eql",
+            "prefix",
+            "not_prefix",
+            "suffix",
+            "not_suffix",
+            "match",
+            "not_match"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "operators": [
+            "eq",
+            "not_eq",
+            "eql",
+            "not_eql",
+            "prefix",
+            "not_prefix",
+            "suffix",
+            "not_suffix",
+            "match",
+            "not_match"
+          ]
+        },
+        "difficulty": {
+          "type": "string",
+          "operators": [
+            "eq",
+            "not_eq",
+            "eql",
+            "not_eql",
+            "prefix",
+            "not_prefix",
+            "suffix",
+            "not_suffix",
+            "match",
+            "not_match"
+          ]
+        },
+        "preparation_time": {
+          "type": "integer",
+          "operators": [
+            "eq",
+            "not_eq",
+            "gt",
+            "gte",
+            "lt",
+            "lte"
+          ]
+        },
+        "created_at": {
+          "type": "datetime",
+          "operators": [
+            "eq",
+            "not_eq",
+            "gt",
+            "gte",
+            "lt",
+            "lte"
+          ]
+        },
+        "likes_count": {
+          "type": "integer",
+          "operators": [
+            "eq",
+            "not_eq",
+            "gt",
+            "gte",
+            "lt",
+            "lte"
+          ]
+        },
+        "category_id": {
+          "type": "integer_id",
+          "operators": [
+            "eq",
+            "not_eq",
+            "gt",
+            "gte",
+            "lt",
+            "lte"
+          ]
+        },
+        "liked_by_current_user": {
+          "type": "boolean",
+          "operators": [
+            "eq"
+          ],
+          "single": true
+        }
+      },
+      "relationships": {
+        "author": {
+          "type": "belongs_to",
+          "description": null,
+          "resource": "AuthorResource"
+        },
+        "categories": {
+          "type": "many_to_many",
+          "description": null,
+          "resource": "CategoryResource"
+        }
+      },
+      "stats": {
+        "total": [
+          "count"
+        ]
+      }
+    }
+  ],
+  "endpoints": {
+    "/api/v1/authors": {
+      "actions": {
+        "index": {
+          "resource": "AuthorResource"
+        },
+        "show": {
+          "resource": "AuthorResource"
+        }
+      }
+    },
+    "/api/v1/categories": {
+      "actions": {
+        "index": {
+          "resource": "CategoryResource"
+        }
+      }
+    },
+    "/api/v1/recipes": {
+      "actions": {
+        "index": {
+          "resource": "RecipeResource"
+        },
+        "show": {
+          "resource": "RecipeResource"
+        }
+      }
+    }
+  },
+  "types": {
+    "array": {
+      "kind": "array",
+      "description": "Base Type."
+    },
+    "array_of_big_decimals": {
+      "kind": "array",
+      "description": "Base Type."
+    },
+    "array_of_dates": {
+      "kind": "array",
+      "description": "Base Type."
+    },
+    "array_of_datetimes": {
+      "kind": "array",
+      "description": "Base Type."
+    },
+    "array_of_floats": {
+      "kind": "array",
+      "description": "Base Type."
+    },
+    "array_of_integer_enums": {
+      "kind": "array",
+      "description": "Base Type."
+    },
+    "array_of_integer_ids": {
+      "kind": "array",
+      "description": "Base Type."
+    },
+    "array_of_integers": {
+      "kind": "array",
+      "description": "Base Type."
+    },
+    "array_of_string_enums": {
+      "kind": "array",
+      "description": "Base Type."
+    },
+    "array_of_strings": {
+      "kind": "array",
+      "description": "Base Type."
+    },
+    "array_of_uuids": {
+      "kind": "array",
+      "description": "Base Type."
+    },
+    "big_decimal": {
+      "kind": "scalar",
+      "description": "Base Type."
+    },
+    "boolean": {
+      "kind": "scalar",
+      "description": "Base Type."
+    },
+    "date": {
+      "kind": "scalar",
+      "description": "Base Type."
+    },
+    "datetime": {
+      "kind": "scalar",
+      "description": "Base Type."
+    },
+    "float": {
+      "kind": "scalar",
+      "description": "Base Type."
+    },
+    "hash": {
+      "kind": "record",
+      "description": "Base Type."
+    },
+    "integer": {
+      "kind": "scalar",
+      "description": "Base Type."
+    },
+    "integer_enum": {
+      "kind": "scalar",
+      "description": "Integer enum type. Like a normal integer, but only eq/!eq filters. Limited to only the allowed values."
+    },
+    "integer_id": {
+      "kind": "scalar",
+      "description": "Base Type. Query/persist as integer, render as string."
+    },
+    "string": {
+      "kind": "scalar",
+      "description": "Base Type."
+    },
+    "string_enum": {
+      "kind": "scalar",
+      "description": "String enum type. Like a normal string, but only eq/!eq and case-sensitive. Limited to only the allowed values."
+    },
+    "uuid": {
+      "kind": "scalar",
+      "description": "Base Type. Like a normal string, but by default only eq/!eq and case-sensitive."
+    }
+  }
+}
