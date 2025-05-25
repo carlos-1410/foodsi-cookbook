@@ -6,10 +6,10 @@ ruby "3.4.2"
 gem "rails", "8.0.2"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 2.1"
+gem "sqlite3", "2.6.0"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", ">= 5.0"
+gem "puma", "6.6.0"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
@@ -51,17 +51,17 @@ gem "activerecord-import"
 gem "graphiti"
 gem "graphiti-rails"
 gem "vandal_ui"
-gem "kaminari", "~> 1.1"
-gem "responders", "~> 3.0"
+gem "kaminari", "1.2.2"
+gem "responders", "3.1.1"
 
 group :development, :test do
   gem "rspec-rails", "~> 8.0"
   gem "factory_bot_rails", "~> 6.4.4"
-  gem "faker", "~> 2.5"
+  gem "faker", "3.5.1"
   gem "graphiti_spec_helpers"
   gem "shoulda-matchers", "~> 5.0"
 end
 
 group :test do
-  gem "database_cleaner", "~> 1.7"
+  gem "database_cleaner", "2.1.0"
 end
